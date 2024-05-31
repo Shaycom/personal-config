@@ -1,3 +1,5 @@
+# These subscriptions are free and generate for personal use
+
 # Warp on Warp
 
 [This Config file](WoW/WarpOnWarp-HiddifyNext.json) can be used directly in the [Hiddify Next](https://github.com/hiddify/hiddify-next/releases) App. But it is better to make your personal warp config to have better speed and lower delay.
