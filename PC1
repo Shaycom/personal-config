@@ -42,16 +42,16 @@
     "final": "dns-remote",
     "static_ips": {
       "sky.rethinkdns.com": [
-        "188.114.99.0",
         "188.114.98.0",
-        "2a06:98c1:3122::",
+        "188.114.99.0",
         "2a06:98c1:3123::",
-        "104.18.202.232",
-        "104.18.203.232",
-        "188.114.98.0",
-        "188.114.99.0",
         "2a06:98c1:3122::",
-        "2a06:98c1:3123::"
+        "104.18.203.232",
+        "104.18.202.232",
+        "188.114.99.0",
+        "188.114.98.0",
+        "2a06:98c1:3123::",
+        "2a06:98c1:3122::"
       ]
     },
     "independent_cache": true
@@ -114,13 +114,13 @@
       "tag": "IP-\u003eIran, shaycom",
       "local_address": [
         "172.16.0.2/32",
-        "2606:4700:110:8cf2:a2ba:febb:a75e:e60d/128"
+        "2606:4700:110:80a3:59b0:a8c5:f415:68e/128"
       ],
-      "private_key": "CM1RVm//mDZtMarKQ5BFKIgNAjQlW/3LO1ecg6daGmE=",
-      "server": "162.159.195.97",
-      "server_port": 1074,
+      "private_key": "OKW1ABN3HY9h+Yn3zh/syRqcVAwv43pzBhLsIxawSXI=",
+      "server": "162.159.192.162",
+      "server_port": 891,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": "j7Gj",
+      "reserved": "e4rx",
       "mtu": 1280,
       "fake_packets": "5-10"
     },
@@ -130,13 +130,13 @@
       "detour": "IP-\u003eIran, shaycom",
       "local_address": [
         "172.16.0.2/32",
-        "2606:4700:110:8862:679b:4a3e:cada:d3af/128"
+        "2606:4700:110:8184:36b6:5c67:ce48:1339/128"
       ],
-      "private_key": "8JCWezsjRkutqay1IMwief/F05UDaClGW6EADSc8ynU=",
-      "server": "162.159.195.97",
-      "server_port": 1074,
+      "private_key": "qDVVuK93lDjf+6OOHbbfmC0fCqPeUuZ9PIrCRYofNFc=",
+      "server": "162.159.192.162",
+      "server_port": 891,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": "A0zt",
+      "reserved": "Tb5q",
       "mtu": 1280,
       "fake_packets": "5-10"
     },
@@ -202,7 +202,7 @@
     },
     "clash_api": {
       "external_controller": "127.0.0.1:6756",
-      "secret": "qVUzDgAaYr-LIe0S"
+      "secret": "NZCMjA3NWe_YO_6q"
     }
   }
 }
