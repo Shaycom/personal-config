@@ -42,16 +42,16 @@
     "final": "dns-remote",
     "static_ips": {
       "sky.rethinkdns.com": [
-        "188.114.98.0",
         "188.114.99.0",
+        "188.114.98.0",
         "2a06:98c1:3123::",
         "2a06:98c1:3122::",
         "104.18.203.232",
         "104.18.202.232",
-        "188.114.99.0",
         "188.114.98.0",
-        "2a06:98c1:3123::",
-        "2a06:98c1:3122::"
+        "188.114.99.0",
+        "2a06:98c1:3122::",
+        "2a06:98c1:3123::"
       ]
     },
     "independent_cache": true
@@ -93,8 +93,8 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "IP-\u003eIran, shaycom",
-        "IP-\u003eMain, shaycom"
+        "IP-\u003eIran, Yotube:Geekmeek",
+        "IP-\u003eMain, Yotube:Geekmeek"
       ],
       "default": "auto"
     },
@@ -102,8 +102,8 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "IP-\u003eIran, shaycom",
-        "IP-\u003eMain, shaycom"
+        "IP-\u003eIran, Yotube:Geekmeek",
+        "IP-\u003eMain, Yotube:Geekmeek"
       ],
       "url": "http://cp.cloudflare.com/",
       "interval": "10m0s",
@@ -111,32 +111,32 @@
     },
     {
       "type": "wireguard",
-      "tag": "IP-\u003eIran, shaycom",
+      "tag": "IP-\u003eIran, Yotube:Geekmeek",
       "local_address": [
         "172.16.0.2/32",
-        "2606:4700:110:80a3:59b0:a8c5:f415:68e/128"
+        "2606:4700:110:8df2:31a3:7577:d6e3:ffdc/128"
       ],
-      "private_key": "OKW1ABN3HY9h+Yn3zh/syRqcVAwv43pzBhLsIxawSXI=",
-      "server": "162.159.192.162",
-      "server_port": 891,
+      "private_key": "YBlRbCU41tcAHb9cytldy399/rlsYP8S9HAEX/1iWGg=",
+      "server": "188.114.99.55",
+      "server_port": 988,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": "e4rx",
+      "reserved": "aESG",
       "mtu": 1280,
       "fake_packets": "5-10"
     },
     {
       "type": "wireguard",
-      "tag": "IP-\u003eMain, shaycom",
-      "detour": "IP-\u003eIran, shaycom",
+      "tag": "IP-\u003eMain, Yotube:Geekmeek",
+      "detour": "IP-\u003eIran, Yotube:Geekmeek",
       "local_address": [
         "172.16.0.2/32",
-        "2606:4700:110:8184:36b6:5c67:ce48:1339/128"
+        "2606:4700:110:8e2a:bfd2:4729:b4e4:208b/128"
       ],
-      "private_key": "qDVVuK93lDjf+6OOHbbfmC0fCqPeUuZ9PIrCRYofNFc=",
-      "server": "162.159.192.162",
-      "server_port": 891,
+      "private_key": "SJbHY6sX/Rg4T8G0jVLXbw5DyPAQLkPFwBpzQ0ZwHHA=",
+      "server": "188.114.99.55",
+      "server_port": 988,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": "Tb5q",
+      "reserved": "1yXC",
       "mtu": 1280,
       "fake_packets": "5-10"
     },
@@ -202,7 +202,7 @@
     },
     "clash_api": {
       "external_controller": "127.0.0.1:6756",
-      "secret": "NZCMjA3NWe_YO_6q"
+      "secret": "ybMrpwj3fPEgyINU"
     }
   }
 }
