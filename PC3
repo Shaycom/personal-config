@@ -134,13 +134,13 @@
       "detour": "IR1🇮🇷(shaycom) § 0",
       "local_address": [
         "172.16.0.2/32",
-        "2606:4700:110:814b:b064:c5fa:206f:9a0d/128"
+        "2606:4700:110:8de5:50ab:b95e:9fb3:c8b7/128"
       ],
-      "private_key": "iHn4rSYEeaD2O7NpkogWjq94NO4FpIErVtJ0hxZbwFs=",
-      "server": "162.159.192.136",
-      "server_port": 7156,
+      "private_key": "YNZVo7EdllrlbTAJqDUyEKZuFEqUUQfKUYwoO/T3hnI=",
+      "server": "162.159.192.189",
+      "server_port": 945,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": [190,69,226],
+      "reserved": [215,220,53],
       "mtu": 1280
     },
     {
@@ -148,17 +148,16 @@
       "tag": "IR2🇮🇷(shaycom) § 2",
       "local_address": [
         "172.16.0.2/32",
-        "2606:4700:110:8fd6:fb4f:7d12:db1d:4b7d/128"
-      ],
-      "private_key": "iHn4rSYEeaD2O7NpkogWjq94NO4FpIErVtJ0hxZbwFs=",
-      "server": "162.159.192.136",
-      "server_port": 7156,
+        "2606:4700:110:8865:bfb2:940a:538d:90dc/128"
+    ],
+      "private_key": "kPZ8kWaO8XEaCu/Iqc5lIWDpxKFoeENLIIH5BM+Pykk=",
+      "server": "162.159.192.189",
+      "server_port": 945,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": [145,7,27],
+      "reserved": [178,146,141], 
+      
       "mtu": 1330,
-      "fake_packets": "5-10",
-      "fake_packets_size": "40-100",
-      "fake_packets_delay": "20-250"
+      "fake_packets": "5-10"
     },
     {
       "type": "wireguard",
@@ -166,14 +165,15 @@
       "detour": "IR2🇮🇷(shaycom) § 2",
       "local_address": [
         "172.16.0.2/32",
-        "2606:4700:110:8865:bfb2:940a:538d:90dc/128"
+        "2606:4700:110:814b:b064:c5fa:206f:9a0d/128"
     ],
-    "private_key": "kPZ8kWaO8XEaCu/Iqc5lIWDpxKFoeENLIIH5BM+Pykk=",
-      "server": "162.159.195.60",
-      "server_port": 945,
+      "private_key": "sEAHJBb6nybjymyfd8+W6TJpSleiYirZI4IgquEEklg=",
+      "server": "162.159.192.136",
+      "server_port": 7156,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": [178,146,141], 
-      "mtu": 1280
+      "reserved": [190,69,226], 
+      "mtu": 1280,
+      "fake_packets": "5-10"
     },
     {
       "type": "dns",
