@@ -1,22 +1,37 @@
 {
-        "route": {                                                            "geoip": {
+        "route": {
+                "geoip": {
                 "path": "geo-assets\\sagernet-sing-geoip-geoip.db"
-                },                                                            "geosite": {
+                },
+                "geosite": {
                 "path": "geo-assets\\sagernet-sing-geosite-geosite.db"
-                },                                                            "rules": [
-                {                                                                     "inbound": "dns-in",
+                },
+                "rules": [
+                {
+                        "inbound": "dns-in",
                         "outbound": "dns-out"
-                },                                                            {
-                        "port": 53,                                                   "outbound": "dns-out"
-                },                                                            {
-                        "clash_mode": "Direct",                                       "outbound": "direct"                                  },
-                {                                                                     "clash_mode": "Global",
-                        "outbound": "select"                                  }
-                ],                                                            "auto_detect_interface": true,
-                "override_android_vpn": true                          },
+                },
+                {
+                        "port": 53,
+                        "outbound": "dns-out"
+                },
+                {
+                        "clash_mode": "Direct",
+                        "outbound": "direct"
+                },
+                {
+                        "clash_mode": "Global",
+                        "outbound": "select"
+                }
+                ],
+                "auto_detect_interface": true,
+                "override_android_vpn": true
+        },
         "outbounds": [
-                {                                                             "type": "selector",
-                "tag": "select",                                              "outbounds": [
+                {
+                "type": "selector",
+                "tag": "select",
+                "outbounds": [
                         "auto",
                         "IP->Iran, shaycom",
                         "IP->Main, shaycom"
@@ -38,13 +53,13 @@
                 "tag": "IP->Iran, shaycom",
                 "local_address": [
                         "172.16.0.2/32",
-                        "2606:4700:110:8293:f86e:20e0:dd5e:46ca/128"
+                        "2606:4700:110:89c4:e3da:9c31:a112:2f38/128"
                 ],
-                "private_key": "UFNvbB+hL4s9KLI0zWY9Rk6JN40lxxwtfa/z/yBRO08=",
-                "server": "188.114.96.172",
-                "server_port": 878,
+                "private_key": "mIc3744KjRmSXbizISu/SXRfSE1T3mfOQrIQ4m1xgEs=",
+                "server": "188.114.97.235",
+                "server_port": 3581,
                 "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-                "reserved": [218,21,113],
+                "reserved": [129,35,22],
                 "mtu": 1280,
                 "fake_packets": "5-10"
                 },
@@ -54,13 +69,13 @@
                 "detour": "IP->Iran, shaycom",
                 "local_address": [
                         "172.16.0.2/32",
-                        "2606:4700:110:8701:d3fe:1193:8b78:9192/128"
+                        "2606:4700:110:86f9:1f8c:18c9:bcbd:f899/128"
                 ],
-                "private_key": "sMchaf60CX31x+upy0XToWqI/wI0Ti3VqmlZKV/Kp3U=",
-                "server": "188.114.96.172",
-                "server_port": 878,
+                "private_key": "GHVMgvsN0RCeBvuU17OruPq7+DCvAHEwvXBQdEqdDVM=",
+                "server": "188.114.97.235",
+                "server_port": 3581,
                 "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-                "reserved": [133,117,65],
+                "reserved": [118,175,133],
                 "mtu": 1280,
                 "fake_packets": "5-10"
                 },
