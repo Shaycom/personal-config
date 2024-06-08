@@ -23,8 +23,7 @@
                         "clash_mode": "Global",
                         "outbound": "select"
                 }
-                ],
-                "auto_detect_interface": true,
+                ],                                                                    "auto_detect_interface": true,
                 "override_android_vpn": true
         },
         "outbounds": [
@@ -53,13 +52,13 @@
                 "tag": "IP->Iran, shaycom",
                 "local_address": [
                         "172.16.0.2/32",
-                        "2606:4700:110:8918:9055:6977:7d91:f54/128"
+                        "2606:4700:110:8109:aad8:c2e5:5122:9216/128"
                 ],
-                "private_key": "sPYpzXNcTbUStXsSMPaR18+1pX/O8RGJJxFJ6/Cd6WI=",
-                "server": "188.114.96.250",
-                "server_port": 5956,
+                "private_key": "ELNqsi0wOtTHZIBh9mpyrqEFNUYHPQe4mHDhK+vgKVk=",
+                "server": "162.159.192.40",
+                "server_port": 8319,
                 "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-                "reserved": [80,129,69],
+                "reserved": [153,101,226],
                 "mtu": 1280,
                 "fake_packets": "5-10"
                 },
@@ -69,13 +68,13 @@
                 "detour": "IP->Iran, shaycom",
                 "local_address": [
                         "172.16.0.2/32",
-                        "2606:4700:110:85a9:9569:6d1d:47ba:2e04/128"
+                        "2606:4700:110:81bb:e305:a611:3526:99d/128"
                 ],
-                "private_key": "2PhYF/ajTtdJrUGdGW3OrEsEBU1WPg4mf9PTzRuGbk0=",
-                "server": "188.114.96.250",
-                "server_port": 5956,
+                "private_key": "oGEYBbACeNyix9DRHsEnd9DNi5CkB6iU91YQNXtCVGY=",
+                "server": "162.159.192.40",
+                "server_port": 8319,
                 "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-                "reserved": [70,1,171],
+                "reserved": [226,222,156],
                 "mtu": 1280,
                 "fake_packets": "5-10"
                 },
