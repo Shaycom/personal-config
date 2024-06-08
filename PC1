@@ -1,39 +1,21 @@
 {
-        "route": {
-                "geoip": {
-                "path": "geo-assets\\sagernet-sing-geoip-geoip.db"
-                },
-                "geosite": {
-                "path": "geo-assets\\sagernet-sing-geosite-geosite.db"
-                },
-                "rules": [
-                {
-                        "inbound": "dns-in",
-                        "outbound": "dns-out"
-                },
-                {
-                        "port": 53,
-                        "outbound": "dns-out"
-                },
-                {
-                        "clash_mode": "Direct",
-                        "outbound": "direct"
-                },
-                {
-                        "clash_mode": "Global",
-                        "outbound": "select"
-                }
-                ],                                                                    "auto_detect_interface": true,
-                "override_android_vpn": true
-        },
-        "outbounds": [
-                {
-                "type": "selector",
-                "tag": "select",
-                "outbounds": [
-                        "auto",
-                        "IP->Iran, shaycom",
-                        "IP->Main, shaycom"
+        "route": {                                                                    "geoip": {
+                "path": "geo-assets\\sagernet-sing-geoip-geoip.db"                    },
+                "geosite": {                                                          "path": "geo-assets\\sagernet-sing-geosite-geosite.db"
+                },                                                                    "rules": [
+                {                                                                             "inbound": "dns-in",
+                        "outbound": "dns-out"                                         },
+                {                                                                             "port": 53,
+                        "outbound": "dns-out"                                         },
+                {                                                                             "clash_mode": "Direct",
+                        "outbound": "direct"                                          },
+                {                                                                             "clash_mode": "Global",
+                        "outbound": "select"                                          }                                                                     ],                                                                    "auto_detect_interface": true,
+                "override_android_vpn": true                                  },
+        "outbounds": [                                                                {
+                "type": "selector",                                                   "tag": "select",
+                "outbounds": [                                                                "auto",
+                        "IP->Iran, shaycom",                                                  "IP->Main, shaycom"
                 ],
                 "default": "auto"
                 },
@@ -52,13 +34,13 @@
                 "tag": "IP->Iran, shaycom",
                 "local_address": [
                         "172.16.0.2/32",
-                        "2606:4700:110:8109:aad8:c2e5:5122:9216/128"
+                        "2606:4700:110:82ac:fe82:42c4:3793:d9e9/128"
                 ],
-                "private_key": "ELNqsi0wOtTHZIBh9mpyrqEFNUYHPQe4mHDhK+vgKVk=",
-                "server": "162.159.192.40",
-                "server_port": 8319,
+                "private_key": "4B5Dx8iVo7Env3BYismoLE4ZjsEzLM+/bCRU7S9wNWI=",
+                "server": "188.114.96.246",
+                "server_port": 903,
                 "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-                "reserved": [153,101,226],
+                "reserved": [169,232,3],
                 "mtu": 1280,
                 "fake_packets": "5-10"
                 },
@@ -68,13 +50,13 @@
                 "detour": "IP->Iran, shaycom",
                 "local_address": [
                         "172.16.0.2/32",
-                        "2606:4700:110:81bb:e305:a611:3526:99d/128"
+                        "2606:4700:110:8e47:3a2:c1a6:4e23:dca8/128"
                 ],
-                "private_key": "oGEYBbACeNyix9DRHsEnd9DNi5CkB6iU91YQNXtCVGY=",
-                "server": "162.159.192.40",
-                "server_port": 8319,
+                "private_key": "aF2q+eiCIWk7HmebQDJyOp0+zyYfuIKWuQREGBiQTWg=",
+                "server": "188.114.96.246",
+                "server_port": 903,
                 "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-                "reserved": [226,222,156],
+                "reserved": [129,167,130],
                 "mtu": 1280,
                 "fake_packets": "5-10"
                 },
