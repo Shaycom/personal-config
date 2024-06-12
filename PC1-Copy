@@ -39,8 +39,7 @@
                         "IP->Iran, Reserved, shaycom",
                         "IP->Main, Reserved, shaycom"
                 ],
-                "default": "auto",
-                "interrupt_exist_connections": false
+                "default": "auto"
                 },
                 {
                 "type": "urltest",
