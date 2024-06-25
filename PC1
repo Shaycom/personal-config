@@ -1,17 +1,16 @@
-{
-        "route": {                                                   "geoip": {
-                "path": "geo-assets\\sagernet-sing-geoip-geoip.db"
-                },                                                   "geosite": {
-                "path": "geo-assets\\sagernet-sing-geosite-geosite.db"
-                },                                                   "rules": [
-                {                                                            "inbound": "dns-in",
-                        "outbound": "dns-out"                        },
-                {                                                            "port": 53,
-                        "outbound": "dns-out"                        },
-                {                                                            "clash_mode": "Direct",
-                        "outbound": "direct"                         },
-                {                                                            "clash_mode": "Global",
-                        "outbound": "select"                         }
+{                                                            "route": {
+                "geoip": {                                           "path": "geo-assets\\sagernet-sing-geoip-geoip.db"                                                        },
+                "geosite": {                                         "path": "geo-assets\\sagernet-sing-geosite-geosite.db"                                                    },
+                "rules": [                                           {
+                        "inbound": "dns-in",                                 "outbound": "dns-out"
+                },                                                   {
+                        "port": 53,                                          "outbound": "dns-out"
+                },                                                   {
+                        "clash_mode": "Direct",                              "outbound": "direct"
+                },                                                   {
+                        "clash_mode": "Global",
+                        "outbound": "select"
+                }
                 ],                                                   "auto_detect_interface": true,
                 "override_android_vpn": true                 },
         "outbounds": [
@@ -40,13 +39,13 @@
                 "tag": "IP->Iran, shaycom",
                 "local_address": [
                         "172.16.0.2/32",
-                        "2606:4700:110:8b51:ef5:c0b9:5287:f106/128"
+                        "2606:4700:110:8ba6:a849:1f0b:ba9d:37e0/128"
                 ],
-                "private_key": "8Jl/g214cI6C0S1cZv8403y3ylovgC9RrIe6aCI/7Hc=",
-                "server": "162.159.192.163",
-                "server_port": 968,
+                "private_key": "8PNpiw8qUFEPMKxFeDZgcY6GDNAOsnL9eOAKnXFbGmg=",
+                "server": "188.114.99.235",
+                "server_port": 7559,
                 "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-                "reserved": [169,212,250],
+                "reserved": [96,135,15],
                 "mtu": 1280,
                 "fake_packets": "5-10"
                 },
@@ -56,13 +55,13 @@
                 "detour": "IP->Iran, shaycom",
                 "local_address": [
                         "172.16.0.2/32",
-                        "2606:4700:110:81ce:3733:af9d:953e:7336/128"
+                        "2606:4700:110:829d:dab2:ab9e:95b1:fb50/128"
                 ],
-                "private_key": "eL2xH7cbFjfrk38I49DZXxDojN9V8KK3jpdPf8HobUQ=",
-                "server": "162.159.192.163",
-                "server_port": 968,
+                "private_key": "CLHenONb6q1EqikvYpy0dW7PvWNjwm+Etx0dBRxvuGM=",
+                "server": "188.114.99.235",
+                "server_port": 7559,
                 "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-                "reserved": [41,196,2],
+                "reserved": [126,1,139],
                 "mtu": 1280,
                 "fake_packets": "5-10"
                 },
