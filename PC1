@@ -34,7 +34,7 @@
                 ],
                 "private_key": "cObEjEpNo+GfNXY1nuBcHpxgCcX2E0PAnxwhuM0TeV0=",
                 "server": "162.159.195.157",
-                "server_port": 4400,
+                "server_port": 4500,
                 "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
                 "reserved": [5,22,57],
                 "mtu": 1280,
