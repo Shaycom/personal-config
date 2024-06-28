@@ -49,8 +49,8 @@
                         "2606:4700:110:842d:baf8:7733:5813:27e6/128"
                 ],
                 "private_key": "KIjcKVKDPyrcmXIYB1c91pZ9/+QdxFLZT4JytI+wvnk=",
-                "server": "162.159.192.226",
-                "server_port": 3138,
+                "server": "188.114.97.154",
+                "server_port": 1002,
                 "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
                 "reserved": [46,23,16],
                 "mtu": 1280,
