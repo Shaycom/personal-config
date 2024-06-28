@@ -53,13 +53,13 @@
                 "tag": "IP->Iran, shaycom",
                 "local_address": [
                         "172.16.0.2/32",
-                        "2606:4700:110:877a:860:bace:1a1:3cd0/128"
+                        "2606:4700:110:8311:fe70:baea:8210:63d8/128"
                 ],
-                "private_key": "QD5XXBGd/sRDtZyd52gPlqEi3qruo7ZZG+93miol400=",
-                "server": "188.114.96.21",
-                "server_port": 8886,
+                "private_key": "kIfgWdzLDsP6WzkyTG4slgtLThTWqvjoTVHG1YEIhnU=",
+                "server": "188.114.98.165",
+                "server_port": 1074,
                 "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-                "reserved": [223,58,8],
+                "reserved": [38,151,92],
                 "mtu": 1280,
                 "fake_packets": "5-10"
                 },
@@ -69,13 +69,13 @@
                 "detour": "IP->Iran, shaycom",
                 "local_address": [
                         "172.16.0.2/32",
-                        "2606:4700:110:8b8f:fa95:ba49:1d7f:7dc5/128"
+                        "2606:4700:110:869e:ae8c:d583:f079:1a31/128"
                 ],
-                "private_key": "WKEW6kruWcwnSpXuCiAdpjNCXT3jHfxn6Kjif76nCGw=",
-                "server": "188.114.96.21",
-                "server_port": 8886,
+                "private_key": "eIzDStsisHQwTRlWwYJxxXrh+s5KMPpXxdvaE56nR2A=",
+                "server": "188.114.98.165",
+                "server_port": 1074,
                 "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-                "reserved": [166,175,239],
+                "reserved": [27,18,209],
                 "mtu": 1280,
                 "fake_packets": "5-10"
                 },
