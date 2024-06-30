@@ -1,244 +1,84 @@
-{
-  "log": {
-    "level": "warn",
-    "output": "box.log",
-    "timestamp": true
-  },
-  "dns": {
-    "servers": [
-      {
-        "tag": "dns-remote",
-        "address": "udp://1.1.1.1",
-        "address_resolver": "dns-direct"
-      },
-      {
-        "tag": "dns-trick-direct",
-        "address": "https://sky.rethinkdns.com/",
-        "detour": "direct-fragment"
-      },
-      {
-        "tag": "dns-direct",
-        "address": "1.1.1.1",
-        "address_resolver": "dns-local",
-        "detour": "direct"
-      },
-      {
-        "tag": "dns-local",
-        "address": "local",
-        "detour": "direct"
-      },
-      {
-        "tag": "dns-block",
-        "address": "rcode://success"
-      }
-    ],
-    "rules": [
-      {
-        "domain": "cp.cloudflare.com",
-        "server": "dns-remote",
-        "rewrite_ttl": 3000
-      }
-    ],
-    "final": "dns-remote",
-    "static_ips": {
-      "sky.rethinkdns.com": [
-        "188.114.96.3",
-        "188.114.97.3",
-        "2a06:98c1:3120::3",
-        "2a06:98c1:3121::3",
-        "104.18.202.232",
-        "104.18.203.232",
-        "188.114.97.3",
-        "188.114.96.3",
-        "2a06:98c1:3120::3",
-        "2a06:98c1:3121::3"
-      ]
-    },
-    "independent_cache": true
-  },
-  "inbounds": [
-    {
-      "type": "tun",
-      "tag": "tun-in",
-      "mtu": 9000,
-      "inet4_address": "172.19.0.1/28",
-      "inet6_address": "fdfe:dcba:9876::1/126",
-      "auto_route": true,
-      "strict_route": true,
-      "endpoint_independent_nat": true,
-      "stack": "mixed",
-      "sniff": true,
-      "sniff_override_destination": true,
-      "domain_strategy": "prefer_ipv4"
-    },
-    {
-      "type": "mixed",
-      "tag": "mixed-in",
-      "listen": "127.0.0.1",
-      "listen_port": 2334,
-      "sniff": true,
-      "sniff_override_destination": true,
-      "domain_strategy": "prefer_ipv4"
-    },
-    {
-      "type": "direct",
-      "tag": "dns-in",
-      "listen": "127.0.0.1",
-      "listen_port": 6450
-    }
-  ],
+{                                                            "route": {
+  "geoip": {                                           "path": "geo-assets\\sagernet-sing-geoip-geoip.db"                                                        },
+  "geosite": {                                         "path": "geo-assets\\sagernet-sing-geosite-geosite.db"                                                    },
+  "rules": [                                           {
+          "inbound": "dns-in",                                 "outbound": "dns-out"
+  },                                                   {
+          "port": 53,                                          "outbound": "dns-out"
+  },                                                   {
+          "clash_mode": "Direct",                              "outbound": "direct"
+  },                                                   {
+          "clash_mode": "Global",                              "outbound": "select"
+  }                                                    ],
+  "auto_detect_interface": true,                       "override_android_vpn": true
+},
+"outbounds": [
+  {
+  "type": "selector",
+  "tag": "select",
   "outbounds": [
-    {
-      "type": "selector",
-      "tag": "select",
-      "outbounds": [
-        "auto",
-        "IR1🇮🇷(shaycom) § 0",
-        "Main1🇩🇪(shaycom) § 1",
-        "IR2🇮🇷(shaycom) § 2",
-        "Main2🇩🇪(shaycom) § 3"
-      ],
-      "default": "auto"
-    },
-    {
-      "type": "urltest",
-      "tag": "auto",
-      "outbounds": [
-        "IR1🇮🇷(shaycom) § 0",
-        "Main1🇩🇪(shaycom) § 1",
-        "IR2🇮🇷(shaycom) § 2",
-        "Main2🇩🇪(shaycom) § 3"
-      ],
-      "url": "http://cp.cloudflare.com/",
-      "interval": "3m0s",
-      "idle_timeout": "30m0s"
-    },
-    {
-      "type": "wireguard",
-      "tag": "IR1🇮🇷(shaycom) § 0",
-      "local_address": [
-        "172.16.0.2/32",
-        "2606:4700:110:8e9f:3856:2803:b08f:7d4b/128"
-      ],
-      "private_key": "WALYQj+8H8WZfdfOYndGJx+2QVglNqhTu3wHcaqvPEY=",
-      "server": "162.159.192.20",
-      "server_port": 4233,
-      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": [111,19,73],
-
-      "mtu": 1280,
-      "fake_packets": "5-10"
-    },
-    {
-      "type": "wireguard",
-      "tag": "Main1🇩🇪(shaycom) § 1",
-      "detour": "IR1🇮🇷(shaycom) § 0",
-      "local_address": [
-        "172.16.0.2/32",
-        "2606:4700:110:8de5:50ab:b95e:9fb3:c8b7/128"
-      ],
-      "private_key": "YNZVo7EdllrlbTAJqDUyEKZuFEqUUQfKUYwoO/T3hnI=",
-      "server": "162.159.195.115",
-      "server_port": 4233,
-      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": [215,220,53],
-      "mtu": 1280
-    },
-    {
-      "type": "wireguard",
-      "tag": "IR2🇮🇷(shaycom) § 2",
-      "local_address": [
-        "172.16.0.2/32",
-        "2606:4700:110:8865:bfb2:940a:538d:90dc/128"
-    ],
-      "private_key": "kPZ8kWaO8XEaCu/Iqc5lIWDpxKFoeENLIIH5BM+Pykk=",
-      "server": "188.114.98.185",
-      "server_port": 4233,
-      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": [178,146,141], 
-      
-      "mtu": 1330,
-      "fake_packets": "5-10"
-    },
-    {
-      "type": "wireguard",
-      "tag": "Main2🇩🇪(shaycom) § 3",
-      "detour": "IR2🇮🇷(shaycom) § 2",
-      "local_address": [
-        "172.16.0.2/32",
-        "2606:4700:110:814b:b064:c5fa:206f:9a0d/128"
-    ],
-      "private_key": "sEAHJBb6nybjymyfd8+W6TJpSleiYirZI4IgquEEklg=",
-      "server": "188.114.99.210",
-      "server_port": 4500,
-      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": [190,69,226], 
-      "mtu": 1280,
-      "fake_packets": "5-10"
-    },
-    {
-      "type": "dns",
-      "tag": "dns-out"
-    },
-    {
-      "type": "direct",
-      "tag": "direct"
-    },
-    {
-      "type": "direct",
-      "tag": "direct-fragment",
-      "tls_fragment": {
-        "enabled": true,
-        "size": "1-500",
-        "sleep": "0-500"
-      }
-    },
-    {
-      "type": "direct",
-      "tag": "bypass"
-    },
-    {
-      "type": "block",
-      "tag": "block"
-    }
+          "auto",
+          "IP->Iran, shaycom",
+          "IP->Main, shaycom"
   ],
-  "route": {
-    "geoip": {
-      "path": "geo-assets/sagernet-sing-geoip-geoip.db"
-    },
-    "geosite": {
-      "path": "geo-assets/sagernet-sing-geosite-geosite.db"
-    },
-    "rules": [
-      {
-        "inbound": "dns-in",
-        "outbound": "dns-out"
-      },
-      {
-        "port": 53,
-        "outbound": "dns-out"
-      },
-      {
-        "clash_mode": "Direct",
-        "outbound": "direct"
-      },
-      {
-        "clash_mode": "Global",
-        "outbound": "select"
-      }
-    ],
-    "final": "select",
-    "auto_detect_interface": true,
-    "override_android_vpn": true
+  "default": "auto"
   },
-  "experimental": {
-    "cache_file": {
-      "enabled": true,
-      "path": "clash.db"
-    },
-    "clash_api": {
-      "external_controller": "127.0.0.1:6756",
-      "secret": "uRb7OdrSQ9ek5YVy"
-    }
+  {
+  "type": "urltest",
+  "tag": "auto",
+  "outbounds": [
+          "IP->Iran, shaycom",
+          "IP->Main, shaycom"
+  ],
+  "url": "http://cp.cloudflare.com/",
+  "interval": "10m0s"
+  },
+  {
+  "type": "wireguard",
+  "tag": "IP->Iran, shaycom",
+  "local_address": [
+          "172.16.0.2/32",
+          "2606:4700:110:8f42:c37:548a:ceda:6156/128"
+  ],
+  "private_key": "IIMDPnPX0Y10gHpgPClrYbxS6Asl5po915q5fi81WUY=",
+  "server": "162.159.192.192",
+  "server_port": 5279,
+  "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+  "reserved": [117,119,0],
+  "mtu": 1280,
+  "fake_packets": "5-10"
+  },
+  {
+  "type": "wireguard",
+  "tag": "IP->Main, shaycom",
+  "detour": "IP->Iran, shaycom",
+  "local_address": [
+          "172.16.0.2/32",
+          "2606:4700:110:8c7c:4f6b:c2d5:21b9:64cd/128"
+  ],
+  "private_key": "uDjwFoDpvbW/GzutZn/vpv5frRWBLj7z9kjRae/rcnE=",
+  "server": "162.159.192.192",
+  "server_port": 5279,
+  "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+  "reserved": [156,204,144],
+  "mtu": 1280,
+  "fake_packets": "5-10"
+  },
+  {
+  "type": "dns",
+  "tag": "dns-out"
+  },
+  {
+  "type": "direct",
+  "tag": "direct"
+  },
+  {
+  "type": "direct",
+  "tag": "bypass"
+  },
+  {
+  "type": "block",
+  "tag": "block"
   }
+]
 }
