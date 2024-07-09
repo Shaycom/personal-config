@@ -57,7 +57,7 @@
                 ],
                 "private_key": "GD243kS+onv0xU/ioJ7lzg5P1UuhumEmIgQnYoBcamU=",
                 "server": "162.159.192.17",
-                "server_port": 8319,
+                "server_port": 3138,
                 "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
                 "reserved": [97,56,92],
                 "mtu": 1280,
