@@ -60,8 +60,7 @@
                 "server_port": 8319,
                 "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
                 "reserved": [4,36,8],
-                "mtu": 1280,
-                "fake_packets": "5-10"
+                "mtu": 1280
                 },
                 {
                 "type": "wireguard",
@@ -76,8 +75,7 @@
                 "server_port": 8319,
                 "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
                 "reserved": [46,85,18],
-                "mtu": 1280,
-                "fake_packets": "5-10"
+                "mtu": 1280
                 },
                 {
                 "type": "dns",
